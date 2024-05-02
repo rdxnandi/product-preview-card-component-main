@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--Cream);
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  max-width: 500px;
+  transform: scale(1.1);
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+}
+
+.card img {
+  width: 290px;
+  height: 100%;
+  border-radius: 12px 0 0 12px;
+}
+
+.card .main {
+  background: var(--White);
+  border-radius: 0 12px 12px 0;
+  padding: 24px;
+  min-width: 290px;
+}
+
+.name {
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: var(--Dark-grayish-blue);
+}
+
+.head {
+  margin-bottom: 24px;
+  font-size: 33px;
+  font-family: "Fraunces", serif;
+}
+
+.para {
+  margin-bottom: 25px;
+  color: var(--Dark-grayish-blue);
+  line-height: 23px;
+}
+
+.price {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 25px;
+}
+
+.price h1 {
+  color: var(--Dark-cyan);
+  font-family: "Fraunces", serif;
+}
+
+.price p {
+  margin-top: 7px;
+  color: var(--Dark-grayish-blue);
+}
+
+.button {
+  background: var(--Dark-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px;
+  border-radius: 0.5rem;
+}
+
+.button img {
+  width: 6%;
+}
+
+.button a {
+  text-decoration: none;
+  color: var(--White);
+}
+
+@media (max-width: 400px) {
+  .container {
+    max-width: 346px;
+    transform: scale(0.9);
+  }
+  .card {
+    background: var(--White);
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+  }
+  .card .img img {
+    content: url(./images/image-product-mobile.jpg);
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+    background-size: cover;
+  }
+  .card .main {
+    background: transparent;
+  }
+}
